@@ -1,0 +1,105 @@
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --accent: #666666;
+  --max-width: 1100px;
+  --font-serif: 'Times New Roman', Times, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+main {
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header {
+  padding: 4rem 2rem 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+footer {
+  padding: 4rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.artwork-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.artwork-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.artwork-card:hover img {
+  transform: scale(1.05);
+}
+
+.bio-content {
+  max-width: 600px;
+  margin: 4rem auto;
+}
+
+.contact-content {
+  text-align: center;
+  margin: 4rem auto;
+}
