@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: 'Wandi de Carvalho Lucas | Art Portfolio',
@@ -30,6 +31,7 @@ export default function RootLayout({
           <p>&copy; {new Date().getFullYear()} Wandi de Carvalho Lucas</p>
         </footer>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
