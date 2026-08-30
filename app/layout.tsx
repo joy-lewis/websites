@@ -2,8 +2,25 @@ import './globals.css'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Barlow, Nunito } from 'next/font/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+
+// Closest Google Font to DIN Neuzeit Grotesk — used for all headings
+const barlow = Barlow({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-heading',
+  display: 'swap',
+})
+
+// Closest Google Font to Avenir Light — used for all body text
+const nunito = Nunito({
+  subsets: ['latin'],
+  weight: ['300', '400'],
+  variable: '--font-body',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Wandi de Carvalho Lucas | Art Portfolio',
@@ -16,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${barlow.variable} ${nunito.variable}`}>
       <body>
         <header>
           <Link href="/" className="logo-link">
@@ -30,9 +47,10 @@ export default function RootLayout({
             />
           </Link>
           <nav>
-            <Link href="/">Gallery</Link>
-            <Link href="/bio">Bio</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/">gallery.</Link>
+            <Link href="/exhibits">exhibits.</Link>
+            <Link href="/bio">bio.</Link>
+            <Link href="/contact">contact.</Link>
           </nav>
         </header>
         <main>{children}</main>
