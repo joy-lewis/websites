@@ -52,7 +52,7 @@ export default function Bio() {
             TikTok
           </a>
           <a
-            href="https://www.instagram.com/by.wandi"
+            href="https://www.instagram.com/ft.wandy"
             target="_blank"
             rel="noopener noreferrer"
           >
