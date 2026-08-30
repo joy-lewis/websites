@@ -360,7 +360,7 @@ main {
 .artwork-title {
   font-family: var(--font-heading);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 600;
   color: var(--foreground);
   letter-spacing: 0.04em;
 }
