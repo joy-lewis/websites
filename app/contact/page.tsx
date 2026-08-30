@@ -1,13 +1,18 @@
 export default function Contact() {
   return (
-    <div className="contact-content">
-      <h2>GET IN TOUCH</h2>
-      <p style={{ marginTop: '2rem' }}>
-        For inquiries regarding exhibitions, commissions, or available works, please reach out via email:
+    <div className="contact-page">
+      <p className="section-label">Get in Touch</p>
+      <h2>Let&apos;s Connect</h2>
+      <p className="lead">
+        For inquiries regarding exhibitions, commissions, or available works, please reach out directly.
       </p>
-      <p style={{ marginTop: '1.5rem', fontSize: '1.2rem', fontWeight: '500' }}>
-        <a href="mailto:wandi.lucas23@gmail.com">wandi.lucas23@gmail.com</a>
-      </p>
+      <a href="mailto:wandi.lucas23@gmail.com" className="contact-link">
+        wandi.lucas23@gmail.com
+      </a>
+      <div className="contact-divider" />
+      <div className="social-links">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
     </div>
   )
 }

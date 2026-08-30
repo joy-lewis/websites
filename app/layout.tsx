@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 
@@ -18,8 +19,16 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header>
-          <h1>WANDI DE CARVALHO LUCAS</h1>
-          <p style={{ fontSize: '0.9rem', color: '#666', marginTop: '0.5rem' }}>MAASTRICHT, NL</p>
+          <Link href="/" className="logo-link">
+            <Image
+              src="/logo.png"
+              alt="Wandi de Carvalho Lucas"
+              width={90}
+              height={60}
+              className="site-logo"
+              priority
+            />
+          </Link>
           <nav>
             <Link href="/">Gallery</Link>
             <Link href="/bio">Bio</Link>
@@ -29,6 +38,7 @@ export default function RootLayout({
         <main>{children}</main>
         <footer>
           <p>&copy; {new Date().getFullYear()} Wandi de Carvalho Lucas</p>
+          <p>Maastricht, Netherlands</p>
         </footer>
         <SpeedInsights />
         <Analytics />
